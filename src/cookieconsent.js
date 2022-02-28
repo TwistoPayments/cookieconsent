@@ -1299,7 +1299,7 @@
             if (_config.auto_language === 'browser') {
                 return _getValidatedLanguage(_getBrowserLang(), languages);
             } else if (_config.auto_language === 'document') {
-                return _getValidatedLanguage(document.documentElement.lang, languages);
+                return _getValidatedLanguage(document.documentElement.lang.match(/\w*/)[0], languages);
             } else {
                 if (typeof requested_language === 'string') {
                     return _config.current_lang = _getValidatedLanguage(requested_language, languages);
