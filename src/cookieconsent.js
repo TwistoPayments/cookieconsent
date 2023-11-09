@@ -148,6 +148,7 @@
             /** @type {HTMLElement} */ all_modals_container,
 
             /** @type {HTMLElement} */ consent_modal,
+            /** @type {HTMLElement} */ consent_modal_close_btn,
             /** @type {HTMLElement} */ consent_modal_title,
             /** @type {HTMLElement} */ consent_modal_description,
             /** @type {HTMLElement} */ consent_primary_btn,
@@ -437,6 +438,21 @@
 
                 consent_modal_title.innerHTML = consent_modal_title_value;
             }
+
+            // Add close button
+
+            consent_modal_close_btn = _createNode('button');
+            consent_modal_close_btn.id = 'c-c-bn';
+            consent_modal_close_btn.setAttribute('role', 'dialog');
+            consent_modal_close_btn.setAttribute('aria-modal', 'true');
+            consent_modal_close_btn.setAttribute('aria-hidden', 'true');
+            consent_modal_close_btn.setAttribute('aria-labelledby', 's-ttl');
+            _addEvent(consent_modal_close_btn, 'click', function(){
+                _cookieconsent.hide();
+                _cookieconsent.accept([]); // accept necessary only
+            });
+            consent_modal.appendChild(consent_modal_close_btn);
+
 
             var description = user_config.languages[lang]['consent_modal']['description'];
 
