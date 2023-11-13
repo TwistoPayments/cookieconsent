@@ -447,6 +447,7 @@
             consent_modal_close_btn.setAttribute('aria-modal', 'true');
             consent_modal_close_btn.setAttribute('aria-hidden', 'true');
             consent_modal_close_btn.setAttribute('aria-labelledby', 's-ttl');
+            consent_modal_close_btn.tabIndex = -1;
             _addEvent(consent_modal_close_btn, 'click', function(){
                 _cookieconsent.hide();
                 _cookieconsent.accept([]); // accept necessary only
@@ -562,13 +563,13 @@
 
                 if(gui_options_data && gui_options_data['consent_modal'] && gui_options_data['consent_modal']['swap_buttons'] === true){
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
-                    primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     third_btn_data && consent_buttons.appendChild(consent_third_btn);
+                    primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     consent_buttons.className = 'swap';
                 }else{
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
-                    secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     third_btn_data && consent_buttons.appendChild(consent_third_btn);
+                    secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                 }
 
                 (primary_btn_data || secondary_btn_data || third_btn_data ) && consent_modal_inner.appendChild(consent_buttons);
