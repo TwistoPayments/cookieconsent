@@ -2,9 +2,9 @@
 :root{
     --cc-bg: #fff;
     --cc-text: #828b99;
-    --cc-btn-primary-bg: rgb(65, 19, 97);
+    --cc-btn-primary-bg: linear-gradient(to right top,#90e040,#2ecd5c);
     --cc-btn-primary-text: var(--cc-bg);
-    --cc-btn-primary-hover-bg: rgb(26, 8, 38);
+    --cc-btn-primary-hover-bg: var(--cc-btn-primary-bg);
     --cc-btn-secondary-bg: #e4def6;
     --cc-btn-secondary-text: #e4def6;
     --cc-btn-secondary-hover-bg: #d8e0e6;
@@ -21,14 +21,6 @@
     --cc-overlay-bg: rgba(8, 1, 13, .4);
     --cc-webkit-scrollbar-bg: #cfd5db;
     --cc-webkit-scrollbar-bg-hover: #9199a0;
-}
-
-html[lang="cs"],
-html[lang="cs-CZ"],
-html[lang="pl"],
-html[lang="pl-PL"]{
-    --cc-btn-primary-bg: linear-gradient(to right top,#90e040,#2ecd5c);
-    --cc-btn-primary-hover-bg: var(--cc-btn-primary-bg);
 }
 
 .cc_div *,
