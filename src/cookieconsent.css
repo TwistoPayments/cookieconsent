@@ -181,7 +181,7 @@
     z-index: 1;
     background: #fff;
     background: var(--cc-bg);
-    max-width: 51rem;
+    max-width: 52rem;
     width: 100%;
     bottom: 1.250em;
     right: 1.250em;
